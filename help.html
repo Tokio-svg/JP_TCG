@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宝石姫バトルカードゲーム(仮称)Web版</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/help.css">
+</head>
+
+<body>
+    <main>
+        <!-- タイトル -->
+        <div>
+            <h1>宝石姫バトルカードゲーム(仮称)Web版</h1>
+            <p class="right">Updated: 2026/05/04</p>
+        </div>
+        <!-- 概要 -->
+        <div>
+            <h2>【概要】</h2>
+            <p>本家宝石姫のアリーナモードを踏襲した対戦型カードゲーム…のWeb版です。</p>
+            <p>ルールの策定やデザインの決定を補助する目的で開発中。</p>
+            <p>ご意見、バグ報告等はDiscordからお願いします。</p>
+            <p>※PC限定、Chromeでのみ動作確認。</p>
+        </div>
+        <!-- 基本ルール -->
+        <div>
+            <h2>【基本ルール】</h2>
+            <p>ユニット（宝石姫）数：5枚（現状1枚から進行可能）</p>
+            <p>山札枚数：40枚（現状40枚未満でも進行可能）</p>
+            <p>同名カード：3枚まで</p>
+            <p>勝敗条件：相手ユニットを全て戦闘不能にすると勝利。また、ドローフェイズで山札が無いと敗北となる</p>
+        </div>
+        <!-- ターンの流れフローチャート -->
+        <div class="flowchart-container">
+            <h2>【ターンの流れ】</h2>
+            <ol class="flowchart">
+                <li>
+                    <div class="flowchart-content">
+                        <div class="flowchart-title">ドローフェイズ</div>
+                        <p>山札から1枚手札に加える</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flowchart-content">
+                        <div class="flowchart-title">アクティブフェイズ</div>
+                        <p>レスト状態のカードをアクティブにする（自動）</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flowchart-content">
+                        <div class="flowchart-title">星光フェイズ</div>
+                        <p>星光を3加える（今後変更の可能性高）</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flowchart-content">
+                        <div class="flowchart-title">メインフェイズ</div>
+                        <p>カードの使用、ユニットによる攻撃を行う</p>
+                        <p>手札誘発カードを所持している場合は攻撃に対して使用可能（現状テスト用カードのみ）</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flowchart-content">
+                        <div class="flowchart-title">エンドフェイズ</div>
+                        <p>手札の枚数が5枚を超えている場合は5枚になるまで捨てる（枚数は暫定）</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <!-- 操作方法 -->
+        <div>
+            <h2>【操作方法】</h2>
+            <h3>ホーム画面</h3>
+            <!-- ホーム画面画像 -->
+            <img src="image/ホーム画面.png" alt="ホーム画面">
+            <div class="paragraph-block">
+                <p>「Battle」をクリックすると対戦画面に移行します。</p>
+                <p>「Deck」をクリックするとデッキ編成画面に移行します。</p>
+            </div>
+            <div class="div-line"></div>
+
+            <h3>対戦画面</h3>
+            <!-- 対戦画面説明画像 -->
+            <img src="image/対戦画面.png" alt="対戦画面">
+            <!-- カード説明画像 -->
+            <img src="image/ユニット.png" alt="ユニット">
+            <img src="image/カード.png" alt="カード">
+            <div class="div-line"></div>
+            <div class="paragraph-block">
+                <p>カードをクリックもしくは右クリックでメニューが表示されます。</p>
+                <p>「詳細」ボタンからカードの情報を表示できます。</p>
+                <p>攻撃や使用が可能な場合は対応するボタンが表示されるので、クリックで選択してください。カードの使用にはカード左上に表示されているコスト分の星光を消費します。</p>
+                <!-- メニュー画像 -->
+                <img src="image/メニュー.png" alt="メニュー">
+            </div>
+            <div class="div-line"></div>
+            <div class="paragraph-block">
+                <p>トラッシュのカードをクリックするとトラッシュ一覧画面に移行します。</p>
+                <!-- トラッシュ一覧画面画像 -->
+                <img src="image/トラッシュ一覧.png" alt="トラッシュ一覧">
+            </div>
+            <div class="div-line"></div>
+            <div class="paragraph-block">
+                <p>攻撃時や対象を取るカード使用時には対象を選択するモードに移行します。選択したら画面下部の「選択完了」ボタンをクリックしてください。「やめる」ボタンでキャンセルできます。</p>
+                <!-- 選択モード画像 -->
+                <img src="image/選択モード.png" alt="選択モード">
+            </div>
+            <div class="div-line"></div>
+            <div class="paragraph-block">
+                <p>下部の「ターン終了」ボタンでターンを終了します。</p>
+                <p>その後手札が6枚以上ある場合は捨てるカードを選択するモードに移行します。これはキャンセルできません。</p>
+            </div>
+            <div class="div-line"></div>
+            <div class="paragraph-block">
+                <p>相手の攻撃時に手札誘発が可能なカードを所持している場合は、使用するカードを選択するモードに移行します。「やめる」ボタンでキャンセルできます。</p>
+            </div>
+            <div class="div-line"></div>
+
+            <h3>デッキ編成画面</h3>
+            <!-- デッキ編成画面説明画像 -->
+            <img src="image/デッキ編成画面.png" alt="デッキ編成画面">
+            <div class="paragraph-block">
+                <p>カードリストのタブからユニットとカードを切り替えて、デッキに編成したいカードをクリックするとデッキに追加されます。</p>
+                <p>デッキからカードを外したい場合は、デッキのカードをクリックする事で1枚ずつ除外できます。</p>
+                <p>「Save」ボタンをクリックすると現在の状態でセーブされます（今のところ完了時のアナウンスはありませんがローカルに保存されます）</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
